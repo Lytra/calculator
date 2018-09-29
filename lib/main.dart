@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_thing/display.dart';
-import 'package:flutter_thing/keypad.dart';
+import 'package:calculator/display.dart';
+import 'package:calculator/keypad.dart';
 
 void main() => runApp(new CalculatorApp());
 
