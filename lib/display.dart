@@ -3,13 +3,20 @@ import 'package:flutter/material.dart';
 class DisplayWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
+    return _DisplayState();
   }
 }
 
 class _DisplayState extends State<DisplayWidget> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    return Container(
+      decoration: BoxDecoration(
+        boxShadow: [BoxShadow(spreadRadius: -4.0, blurRadius: 10.0)],
+      ),
+      child: Container(
+        color: Theme.of(context).canvasColor
+      )
+    );
   }
 }
