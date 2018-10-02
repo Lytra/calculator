@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:calculator/display.dart';
-import 'package:calculator/keypad/keypad.dart';
+
+import 'display.dart';
+import 'keypad/keypad.dart';
+import 'settings/settings_screen.dart';
 
 void main() => runApp(new CalculatorApp());
 
@@ -31,7 +33,16 @@ class _CalculatorState extends State<CalculatorWidget> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: AppBar(title: Text(widget.title)),
+      appBar: AppBar(
+        title: Text(widget.title), 
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.settings), 
+            onPressed: _onSettingsPressed,
+            tooltip: "Settings",
+          )
+        ],
+      ),
       body: _bodyForSize(MediaQuery.of(context).size)
     );
   }
@@ -61,5 +72,14 @@ class _CalculatorState extends State<CalculatorWidget> {
         children: widgets.reversed.toList()
       );
     }
+  }
+
+  void _onSettingsPressed() {
+    print("Opening settings...");
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SettingsScreen())
+    );
   }
 }
