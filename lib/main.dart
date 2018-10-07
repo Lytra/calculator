@@ -54,11 +54,11 @@ class _CalculatorState extends State<CalculatorWidget> {
     final widgets = <Widget>[
       Expanded(
         child: Container(child: KeypadWidget()),
-        flex: 1
+        flex: 3
       ),
       Expanded(
         child: DisplayWidget(),
-        flex: 1
+        flex: 2
       )
     ];
 
