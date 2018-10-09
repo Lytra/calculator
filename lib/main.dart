@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'display.dart';
-import 'keypad/keypad.dart';
-import 'settings/settings_screen.dart';
+import 'package:calculator/display.dart';
+import 'package:calculator/keypad/keypad.dart';
+import 'package:calculator/settings/settings_screen.dart';
 
 void main() => runApp(new CalculatorApp());
 
